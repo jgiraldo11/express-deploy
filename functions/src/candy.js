@@ -16,7 +16,7 @@ export async function addNewCandy(req, res) {
     try {
         const newCandy = req.body;
         await coll.add(newCandy);
-        getAllCandy(re, res);
+        getAllCandy(req, res);
     } catch(err) {
         res.status(500).send(err);
     }
